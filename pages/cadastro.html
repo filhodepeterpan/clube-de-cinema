@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/cinema.ico">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/media.query.css">
+    <title>Clube de Cinema | Cadastro</title>
+</head>
+<body>
+    <header>
+
+        <div class="logo">
+            <h1 id="clube-de-cinema">Clube de Cinema</h1>
+        </div>
+
+        <select id="menu" onchange="mudaPagina()">
+            <option value="../index.html">Início</option>
+            <option value="cadastro.html" selected>Cadastro</option>
+            <option value="carteirinha.html">Minha Carteirinha</option>
+        </select>
+
+    </header>
+
+    <main>
+
+        <div class="introducao">
+            <h1>Cadastre-se para receber sua carteirinha!</h1>
+        </div>
+
+        <div class="inscricao">
+
+            <div class="formulario">
+                
+                <div class="formulario-item">
+                    <label>Nome completo: </label>
+                    <input required type="text" name="nome" id="nome" placeholder="Mia Wallace">
+                </div>
+
+                <div class="formulario-item">
+                    <label>Data de Nascimento:</label>
+                    <input required type="date" name="dataDeNascimento" id="dataDeNascimento" placeholder="28/12/1895">
+                </div>
+
+                <div class="formulario-item">
+                    <label>Email:</label>
+                    <input required type="email" name="email" id="email" placeholder="akira@kurosawa.com">
+                </div>
+
+                <div class="formulario-item">
+                    <label>Número para contato:</label>
+                    <input required type="text" name="telefone" id="telefone" pattern="[0-9()- ]+" maxlength="15" minlength="14" placeholder="(99) 99999-9999" oninput required="validaTelefone(telefone)">
+                </div>
+
+                <div class="formulario-item">
+                    <label>CEP:</label>
+                    <input required type="text" name="cep" id="cep" placeholder="12345678">
+                </div>
+                <button id="buscarEndereco" onclick="pegaEndereco()">Buscar</button>
+                <br><br>
+
+                <div class="formulario-item">
+                    <label>Rua:</label>
+                    <input required type="text" name="rua" id="rua" disabled>
+                </div>
+
+                <div class="formulario-item">
+                    <label>Bairro:</label>
+                    <input required type="text" name="bairro" id="bairro" disabled>
+                </div>
+
+                <div class="formulario-item">
+                    <label>Cidade:</label>
+                    <input required type="text" name="cidade" id="cidade" disabled>
+                </div>
+
+                <div class="formulario-item">
+                    <label>Estado:</label>
+                    <input required type="text" name="estado" id="estado" disabled>
+                </div>
+
+                <div class="formulario-item">
+                    <label>Número:</label>
+                    <input required type="number" name="numeroEndereco" id="numeroEndereco" placeholder="2001">
+                </div>
+
+                <button type="submit" id="gerarCarteirinha">GERAR CARTEIRINHA</button>
+                <br>
+            </div>
+
+
+            <div class="progresso">
+
+            </div>
+    
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-modulo">
+            <h1 id="creditos">CRÉDITOS</h1>
+            <b>DESENVOLVIMENTO</b>
+            <p>Douglas Soares Santos</p>
+            <a id="footer-modulo-github" href="https://www.github.com/filhodepeterpan" target="_blank">
+                <img id="github" src="../img/github-logo.png" alt="Ícone do Github" width="22"> 
+                <p>Acesse o meu Github!</p>
+            </a>
+        </div>
+
+        <div class="footer-modulo">
+            <b>TECNOLOGIAS</b>
+            <p>
+                HTML<br>
+                CSS<br>
+                Javascript<br>
+            </p>
+        </div>
+
+        <div class="footer-modulo" id="footer-modulo-ultimo">
+            <b>IMAGENS</b>
+            <a href="https://www.flaticon.com/free-icons/cinema" target="_blank" title="cinema icons">Cinema icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/github" target="_blank" title="github icons">Github icons created by Pixel perfect - Flaticon</a>
+        </div>
+
+    </footer>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

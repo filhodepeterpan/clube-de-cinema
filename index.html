@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/cinema.ico">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/media.query.css">
+    <title>Clube de Cinema</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1 id="clube-de-cinema">Clube de Cinema</h1>
+        </div>
+
+        <select id="menu" onchange="mudaPagina()">
+            <option value="index.html" selected>Início</option>
+            <option value="./pages/cadastro.html">Cadastro</option>
+            <option value="./pages/carteirinha.html">Minha Carteirinha</option>
+        </select>
+
+    </header>
+
+    <main>
+
+        <div class="introducao">
+            <h1>Seja bem-vindo ao nosso clube!</h1>
+            <p>Você é apaixonado por cinema? Quer compartilhar essa paixão com outras pessoas? No nosso clube, celebramos a sétima arte de uma maneira única e envolvente! Junte-se a nós para explorar filmes clássicos, os últimos lançamentos, e até mesmo aqueles que passaram despercebidos, mas que merecem ser redescobertos.</p>
+        </div>
+        
+        <div class="botao">
+            <button id="cadastro" onclick="window.location.href='./pages/cadastro.html'">CADASTRE-SE AGORA</button>
+        </div>
+
+        <div class="banner">
+            <img>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-modulo">
+            <h1 id="creditos">CRÉDITOS</h1>
+            <b>DESENVOLVIMENTO</b>
+            <p>Douglas Soares Santos</p>
+            <a id="footer-modulo-github" href="https://www.github.com/filhodepeterpan" target="_blank">
+                <img id="github" src="./img/github-logo.png" alt="Ícone do Github" width="22"> 
+                <p>Acesse o meu Github!</p>
+            </a>
+        </div>
+
+        <div class="footer-modulo">
+            <b>TECNOLOGIAS</b>
+            <p>
+                HTML<br>
+                CSS<br>
+                Javascript<br>
+            </p>
+        </div>
+
+        <div class="footer-modulo" id="footer-modulo-ultimo">
+            <b>IMAGENS</b>
+            <a href="https://www.flaticon.com/free-icons/cinema" target="_blank" title="cinema icons">Cinema icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/github" target="_blank" title="github icons">Github icons created by Pixel perfect - Flaticon</a>
+        </div>
+
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

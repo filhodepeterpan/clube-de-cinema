@@ -1,0 +1,170 @@
+@import url(root.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--cor-fonte-padrao);
+    background-color: var(--cor-secundaria);
+    font-family: var(--fonte-padrao);
+}
+
+header{
+    background-color: var(--cor-primaria);
+    box-shadow: var(--sombra);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+#clube-de-cinema{
+    color: var(--cor-terciaria);
+}
+
+select{
+    font-size: 1rem;
+    border: none;
+    color: var(--cor-destaque);
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    outline: none;
+}
+
+select:focus{
+    outline: none;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-fonte-padrao);
+}
+
+b{
+    margin: 0 0 1rem 0;
+}
+
+input{
+    outline: none;
+    padding: 0.2rem 0.3rem;
+    border-radius: var(--arredondamento);
+}
+
+input::placeholder{
+    font-style: italic;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.introducao{
+    padding: 2rem 0;
+}
+
+.introducao h1{
+    color: var(--cor-destaque);
+    padding: 0 0 1rem 0;
+}
+
+.introducao h1, .introducao p{
+    width: 65%;
+    margin: 0 auto;
+}
+
+.inscricao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.formulario-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0.5rem 0;
+}
+
+.formulario-item label{
+    margin: 0 1rem 0 0;
+}
+
+#cadastro, #buscarEndereco, #gerarCarteirinha{
+    background-color: var(--cor-destaque);
+    outline: none;
+    border: none;
+    font-weight: 600;
+    border-radius: var(--arredondamento);
+}
+
+#cadastro{
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+}
+
+#cadastro:hover, #buscarEndereco:hover{
+    background-color: var(--cor-destaque-hover);
+    cursor: pointer;
+}
+
+#buscarEndereco{
+    padding: 0.5rem;
+}
+
+#gerarCarteirinha{
+    margin: 2rem 0;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+
+footer{
+    background-color: var(--cor-terciaria);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-modulo{
+    padding: 0 5rem;
+    border-right: 1px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+#creditos{
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+    margin: 0 0 1rem 0;
+}
+
+#footer-modulo-github{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#github{
+    padding-right: 0.3rem;
+    margin: 1rem 0;
+}
+
+#footer-modulo-ultimo{
+    border: none;
+}
