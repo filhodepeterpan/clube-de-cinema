@@ -30,6 +30,8 @@ header{
 }
 
 #clube-de-cinema{
+    font-family: var(--fonte-destaque);
+    font-size: 3rem;
     color: var(--cor-terciaria);
 }
 

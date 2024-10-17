@@ -6,12 +6,12 @@
     --cor-destaque-hover: rgb(237, 237, 2);
     --cor-fonte-padrao: #FFFFFF;
     --fonte-padrao: "Arial";
-    --fonte-destaque: ;
+    --fonte-destaque: "Cinematografica Bold";
     --arredondamento: 4px;
     --sombra: 0px 2px 4px #121212de;
 }
 
 @font-face{
-    font-family: "";
-    src: url();
+    font-family: "Cinematografica Bold";
+    src: url(../fonts/Cinematografica-Bold-trial.ttf);
 }
