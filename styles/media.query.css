@@ -21,6 +21,28 @@
         flex-direction: column;
     }
 
+    .finalizacao{
+        margin: 5rem 0 1rem 0;
+    }
+
+    .progresso{
+        width: 250px;
+        height: 250px;
+    }
+
+    .progresso::before{
+        width: 220px;
+        height: 220px;
+    }
+
+    #gerarCarteirinha{
+        display: none;
+    }
+
+    #gerarCarteirinha2{
+        display: inline;
+    }
+
     footer{
         display: inline;
         flex-direction: column;

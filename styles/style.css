@@ -75,6 +75,7 @@ main{
 
 .introducao{
     padding: 2rem 0;
+    width: 100%;
 }
 
 .introducao h1{
@@ -83,7 +84,8 @@ main{
 }
 
 .introducao h1, .introducao p{
-    width: 65%;
+    max-width: 65%;
+    text-align: center;
     margin: 0 auto;
 }
 
@@ -105,7 +107,7 @@ main{
     margin: 0 1rem 0 0;
 }
 
-#cadastro, #buscarEndereco, #gerarCarteirinha{
+#cadastro, #buscarEndereco, #gerarCarteirinha, #gerarCarteirinha2{
     background-color: var(--cor-destaque);
     outline: none;
     border: none;
@@ -113,12 +115,16 @@ main{
     border-radius: var(--arredondamento);
 }
 
+#gerarCarteirinha2{
+    display: none;
+}
+
 #cadastro{
     margin: 1rem 0 0 0;
     padding: 1rem;
 }
 
-#cadastro:hover, #buscarEndereco:hover{
+#cadastro:hover, #buscarEndereco:hover, #gerarCarteirinha:hover, #gerarCarteirinha2:hover{
     background-color: var(--cor-destaque-hover);
     cursor: pointer;
 }
@@ -127,12 +133,44 @@ main{
     padding: 0.5rem;
 }
 
-#gerarCarteirinha{
+.finalizacao{
+    margin: 0 3rem;
+}
+.progresso{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(var(--cor-destaque) 0deg, grey 0deg);
+    color: var(--cor-destaque);
+    display: flex;
+    justify-content: center;
+}
+
+.progresso::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--cor-secundaria);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.progresso-valor{
+    align-content: center;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+#gerarCarteirinha, #gerarCarteirinha2{
     margin: 2rem 0;
     padding: 0.5rem 0;
     width: 100%;
 }
-
 
 footer{
     background-color: var(--cor-terciaria);

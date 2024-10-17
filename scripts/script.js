@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const camposObrigatorios = document.querySelectorAll(".formulario-item input[required]");
+    const progressoValor = document.querySelector(".progresso-valor");
+    const progressoBarra = document.querySelector(".progresso");
+
+    function atualizaProgresso() {
+        const preenchidos = Array.from(camposObrigatorios).filter(campo => campo.value.trim() != "").length;
+        const total = camposObrigatorios.length;
+        const porcentagem = Math.round((preenchidos / total) * 100);
+
+        progressoValor.textContent = `${porcentagem}%`;
+        progressoBarra.style.background = `conic-gradient(var(--cor-destaque) ${porcentagem * 3.6}deg, grey 0deg)`;
+    }
+
+    camposObrigatorios.forEach(campo => {
+        campo.addEventListener("input", atualizaProgresso);
+    });
+
+    window.atualizaProgresso = atualizaProgresso;
+});
+
 function mudaPagina(){
     var select = document.getElementById("menu");
     var pagina = select.value;
@@ -43,14 +64,14 @@ function pegaEndereco(){
                 cidade.value = data.localidade;
                 estado.value = data.uf
 
-                componentesDeEndereco.forEach(componenteDeEndereco => {
-                    componenteDeEndereco.style.color = 'white';
+                componentesDeEndereco.forEach(componente => {
+                    componente.style.color = '#FFFFFF';
                 })
 
+                atualizaProgresso();
             }
         })
         .catch(error => {
             alert("Erro ao buscar o CEP.");
         });
 }
-
