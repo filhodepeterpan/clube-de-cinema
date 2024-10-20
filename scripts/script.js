@@ -1,5 +1,12 @@
+const camposObrigatorios = document.querySelectorAll("input[required]");
+
+camposObrigatorios.forEach(campo => {
+    const label = campo.closest(".formulario-item").querySelector("label");
+
+    label.innerHTML += "<b>*</b>";
+});
+
 document.addEventListener("DOMContentLoaded", function() {
-    const camposObrigatorios = document.querySelectorAll(".formulario-item input[required]");
     const progressoValor = document.querySelector(".progresso-valor");
     const progressoBarra = document.querySelector(".progresso");
 

@@ -34,22 +34,22 @@
             <div class="formulario">
                 
                 <div class="formulario-item">
-                    <label>Nome completo: </label>
+                    <label>Nome completo</label>
                     <input required type="text" name="nome" id="nome" placeholder="Mia Wallace">
                 </div>
 
                 <div class="formulario-item">
-                    <label>Data de Nascimento:</label>
+                    <label>Data de nascimento</label>
                     <input required type="date" name="dataDeNascimento" id="dataDeNascimento" placeholder="28/12/1895">
                 </div>
 
                 <div class="formulario-item">
-                    <label>Email:</label>
+                    <label>Email</label>
                     <input required type="email" name="email" id="email" placeholder="akira@kurosawa.com">
                 </div>
 
                 <div class="formulario-item">
-                    <label>Número para contato:</label>
+                    <label>Número para contato</label>
                     <input required type="text" name="telefone" id="telefone" pattern="[0-9()- ]+" maxlength="15" minlength="14" placeholder="(99) 99999-9999" oninput required="validaTelefone(telefone)">
                 </div>
 
@@ -61,28 +61,53 @@
                 <br><br>
 
                 <div class="formulario-item">
-                    <label>Rua:</label>
+                    <label>Rua</label>
                     <input required type="text" name="rua" id="rua" disabled>
                 </div>
 
                 <div class="formulario-item">
-                    <label>Bairro:</label>
+                    <label>Bairro</label>
                     <input required type="text" name="bairro" id="bairro" disabled>
                 </div>
 
                 <div class="formulario-item">
-                    <label>Cidade:</label>
+                    <label>Cidade</label>
                     <input required type="text" name="cidade" id="cidade" disabled>
                 </div>
 
                 <div class="formulario-item">
-                    <label>Estado:</label>
+                    <label>Estado</label>
                     <input required type="text" name="estado" id="estado" disabled>
                 </div>
 
                 <div class="formulario-item">
-                    <label>Número:</label>
+                    <label>Número</label>
                     <input required type="number" name="numeroEndereco" id="numeroEndereco" placeholder="2001">
+                </div>
+
+                <div class="formulario-item">
+                    <label>Trajetória cinéfila</label>
+                    <textarea id="trajetoriaCinefila" placeholder="Eu comecei a assistir filmes com mais atenção aos 14 anos de idade..."></textarea>
+                </div>
+
+                <div class="formulario-item">
+                    <label>Filme favorito</label>
+                    <input type="text" name="filmeFavorito" id="filmeFavorito" placeholder="Dogville">
+                </div>
+
+                <div class="formulario-item">
+                    <label>Diretor(a) favorito(a)</label>
+                    <input type="text" name="diretorFavorito" id="diretorFavorito" placeholder="Sidney Lumet">
+                </div>
+
+                <div class="formulario-item">
+                    <label>Usuário</label>
+                    <input required type="text" name="username" id="username" placeholder="@antoinedoinel" minlength="4" maxlength="20">
+                </div>
+
+                <div class="formulario-item">
+                    <label>Senha</label>
+                    <input required type="password" name="senha" id="senha" minlength="8" maxlength="20">
                 </div>
 
                 <button type="submit" id="gerarCarteirinha">GERAR CARTEIRINHA</button>

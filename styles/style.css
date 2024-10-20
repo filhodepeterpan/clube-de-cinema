@@ -68,6 +68,18 @@ input::placeholder{
     font-style: italic;
 }
 
+input:focus{
+    border: 2px solid var(--cor-terciaria);
+}
+
+input:valid{
+    border: 2px solid var(--cor-input-aceito);
+}
+
+#filmeFavorito:valid, #diretorFavorito:valid{
+    border-color: grey;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -166,6 +178,19 @@ main{
     align-content: center;
     font-size: 2rem;
     z-index: 1;
+}
+
+#trajetoriaCinefila{
+    padding: 0.2rem 0.3rem 15rem 0.3rem;
+    width: 50%;
+}
+
+#trajetoriaCinefila::placeholder{
+    overflow-x: inherit;
+}
+
+#trajetoriaCinefila:focus{
+    outline: none;
 }
 
 #gerarCarteirinha, #gerarCarteirinha2{
