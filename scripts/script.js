@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function mudaPagina(){
-    var select = document.getElementById("menu");
-    var pagina = select.value;
+    const select = document.getElementById("menu");
+    const pagina = select.value;
 
     if (pagina){
         window.location.href = pagina;
