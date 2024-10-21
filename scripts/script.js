@@ -1,3 +1,61 @@
+const paginaInicial = document.getElementById("clube-de-cinema");
+
+paginaInicial.addEventListener("mouseover", function(){
+    paginaInicial.style.cursor = "pointer";
+
+    paginaInicial.addEventListener("click", function(){
+        window.location.href = "../index.html";
+    })
+})
+
+let temaAlternativo = false;
+
+function mudaTema(){
+    const botoes = document.querySelectorAll("button");
+    const creditos = document.getElementById("creditos");
+    const footer = document.querySelector("footer");
+    const iconePadrao = document.getElementById("github");
+    const iconeTematico = document.getElementById("github2");
+
+    const root = {
+        "--cor-primaria" : "#FFFFFF",
+        "--cor-secundaria" : "#B0B0B0",
+        "--cor-terciaria" : "blue",
+        "--cor-destaque" : "rgb(182, 14, 14)",
+        "--cor-destaque-hover" : "rgb(150, 0, 0)",
+        "--cor-input-aceito" : "rgb(26, 200, 26)",
+        "--cor-fonte-padrao" : "#000000"
+    };
+
+    for (const [variavel, cor] of Object.entries(root)) {
+        if (!temaAlternativo) {
+            document.documentElement.style.setProperty(variavel, cor);
+        } 
+        else {
+            document.documentElement.style.removeProperty(variavel);
+        }
+    }
+
+    const corBotao = temaAlternativo ? "#000000" : "#FFFFFF";
+    const corCreditos = temaAlternativo ? "var(--cor-destaque)" : "blue";
+    const corFooter = temaAlternativo ? "#FFFFFF" : "#FFFFFF";
+    const corBgFooter = temaAlternativo ? "var(--cor-terciaria)" : "#000000";
+    const visibilidadeIconeTematico = temaAlternativo ? "none" : "inline";
+    const visibilidadeIconePadrao = temaAlternativo ? "inline" : "none";
+
+    botoes.forEach(botao => {
+        botao.style.color = corBotao;
+    })
+
+    creditos.style.color = corCreditos;
+    footer.style.color = corFooter;
+    footer.style.backgroundColor = corBgFooter;
+    iconeTematico.style.display = visibilidadeIconeTematico;
+    iconePadrao.style.display = visibilidadeIconePadrao;
+
+    temaAlternativo = !temaAlternativo;
+}
+
 const camposObrigatorios = document.querySelectorAll("input[required]");
 
 camposObrigatorios.forEach(campo => {
@@ -72,7 +130,7 @@ function pegaEndereco(){
                 estado.value = data.uf
 
                 componentesDeEndereco.forEach(componente => {
-                    componente.style.color = '#FFFFFF';
+                    componente.style.color = 'var(--cor-fonte-padrao)';
                 })
 
                 atualizaProgresso();
