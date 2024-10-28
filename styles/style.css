@@ -123,7 +123,7 @@ main{
     margin: 0 1rem 0 0;
 }
 
-#cadastro, #buscarEndereco, #gerarCarteirinha, #gerarCarteirinha2, #tema-alternativo-botao{
+button{
     background-color: var(--cor-destaque);
     outline: none;
     border: none;
@@ -140,7 +140,7 @@ main{
     padding: 1rem;
 }
 
-#cadastro:hover, #buscarEndereco:hover, #gerarCarteirinha:hover, #gerarCarteirinha2:hover, #tema-alternativo-botao:hover{
+button:hover{
     background-color: var(--cor-destaque-hover);
     cursor: pointer;
 }
@@ -201,10 +201,14 @@ main{
     outline: none;
 }
 
-#gerarCarteirinha, #gerarCarteirinha2{
-    margin: 2rem 0;
+#gerarCarteirinha, #gerarCarteirinha2, #limparFormulario{
+    margin: 2rem 0.5rem;
     padding: 0.5rem 0;
     width: 100%;
+}
+
+#limparFormulario{
+    background-color: grey;
 }
 
 footer{

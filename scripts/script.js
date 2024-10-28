@@ -140,3 +140,16 @@ function pegaEndereco(){
             alert("Erro ao buscar o CEP.");
         });
 }
+
+function limpaFormulario(){
+    const inputs = document.querySelectorAll("input");
+    const caixaDeTexto = document.getElementById("trajetoriaCinefila");
+
+    inputs.forEach(input => {
+        input.value = "";
+    })
+
+    caixaDeTexto.value = "";
+
+    atualizaProgresso();
+}

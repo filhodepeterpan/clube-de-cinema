@@ -12,6 +12,16 @@
     --sombra: 0px 2px 4px #121212de;
 }
 
+:root.temaAlt{
+    --cor-primaria : #FFFFFF;
+    --cor-secundaria : #B0B0B0;
+    --cor-terciaria : blue;
+    --cor-destaque : rgb(182, 14, 14);
+    --cor-destaque-hover : rgb(150, 0, 0);
+    --cor-input-aceito : rgb(26, 200, 26);
+    --cor-fonte-padrao : #000000;
+}
+
 @font-face{
     font-family: "Cinematografica Bold";
     src: url(../fonts/Cinematografica-Bold-trial.ttf);
